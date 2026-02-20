@@ -11,7 +11,7 @@ if (!supabaseUrl || !supabaseServiceKey) {
 export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey)
 
 // 阿里云OSS配置（服务端）
-const OSS = require('ali-oss')
+import OSS from 'ali-oss'
 const ossClient = new OSS({
   region: process.env.OSS_REGION,
   accessKeyId: process.env.OSS_ACCESS_KEY_ID,
